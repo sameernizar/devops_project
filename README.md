@@ -118,7 +118,7 @@ Create the file:
 cat > terraform.tfvars
 ```
 
-Paste this and press `Ctrl + D`:
+Paste this:
 
 ```hcl
 subscription_id = "your-subscription-id"
@@ -225,32 +225,9 @@ In Jenkins:
 1. Go to Azure Portal
 2. Open your resource group
 3. Get the **public IP** of the VM
-4. Open in browser:
+4. Open in browser
 
-```
-http://<public-ip>
-```
 
 You should see your static website deployed!
 
 ---
-
-## 🛡️ Security Tips
-
-- ❌ Never push `terraform.tfvars` to GitHub
-- ✅ Add this to `.gitignore`:
-
-```gitignore
-terraform.tfvars
-*.key
-*.pem
-*.tfstate
-.terraform/
-```
-
----
-
-## 🙌 Credits
-
-Created by **Sameer Nizar**  
-Guided with ❤️ using Jenkins, Terraform, Ansible & Azure DevOps best practices.
