@@ -48,9 +48,9 @@ It will output:
 
 ```json
 {
-  "appId": "your-client-id",
-  "password": "your-client-secret",
-  "tenant": "your-tenant-id"
+  "appId": "abec7be5-f7d3-41b2-ab92-923671d3bcfa",
+  "password": "dGH8Q~g_6B2kukF6GKrO9THyCVw9B03CQL7GPa~W",
+  "tenant": "ca870cf6-d588-4e34-8aae-36315b4548af"
 }
 ```
 
