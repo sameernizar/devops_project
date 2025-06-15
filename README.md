@@ -22,7 +22,7 @@ devops_project/
 ├── terraform/
 │   ├── main.tf
 │   ├── variables.tf
-│   └── terraform.tfvars         # Contains secrets (not pushed to GitHub)
+│   └── terraform.tfvars        
 ├── ansible/
 │   └── install_web.yml          # Installs Apache and copies index.html
 ├── app/
