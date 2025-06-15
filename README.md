@@ -41,7 +41,7 @@ Login and generate credentials for Terraform:
 ```bash
 az login
 
-az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<your-subscription-id>"
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/05580e5b-033d-48aa-aa79-e0084956bfb7"
 ```
 
 It will output:
