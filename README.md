@@ -22,7 +22,7 @@ devops_project/
 ├── terraform/
 │   ├── main.tf
 │   ├── variables.tf
-│   └── terraform.tfvars         # Contains secrets (not pushed to GitHub)
+│   └── terraform.tfvars        
 ├── ansible/
 │   └── install_web.yml          # Installs Apache and copies index.html
 ├── app/
@@ -41,16 +41,16 @@ Login and generate credentials for Terraform:
 ```bash
 az login
 
-az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<your-subscription-id>"
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/05580e5b-033d-48aa-aa79-e0084956bfb7"
 ```
 
 It will output:
 
 ```json
 {
-  "appId": "your-client-id",
-  "password": "your-client-secret",
-  "tenant": "your-tenant-id"
+  "appId": "abec7be5-f7d3-41b2-ab92-923671d3bcfa",
+  "password": "dGH8Q~g_6B2kukF6GKrO9THyCVw9B03CQL7GPa~W",
+  "tenant": "ca870cf6-d588-4e34-8aae-36315b4548af"
 }
 ```
 
@@ -118,7 +118,7 @@ Create the file:
 cat > terraform.tfvars
 ```
 
-Paste this and press `Ctrl + D`:
+Paste this:
 
 ```hcl
 subscription_id = "your-subscription-id"
@@ -225,32 +225,9 @@ In Jenkins:
 1. Go to Azure Portal
 2. Open your resource group
 3. Get the **public IP** of the VM
-4. Open in browser:
+4. Open in browser
 
-```
-http://<public-ip>
-```
 
 You should see your static website deployed!
 
 ---
-
-## 🛡️ Security Tips
-
-- ❌ Never push `terraform.tfvars` to GitHub
-- ✅ Add this to `.gitignore`:
-
-```gitignore
-terraform.tfvars
-*.key
-*.pem
-*.tfstate
-.terraform/
-```
-
----
-
-## 🙌 Credits
-
-Created by **Sameer Nizar**  
-Guided with ❤️ using Jenkins, Terraform, Ansible & Azure DevOps best practices.
