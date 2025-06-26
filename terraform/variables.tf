@@ -11,5 +11,5 @@ variable "admin_username" {
 }
 
 variable "ssh_public_key" {
-  default = "~/.ssh/id_rsa.pub"
+  default = "/var/jenkins_home/.ssh/id_rsa.pub"
 }
