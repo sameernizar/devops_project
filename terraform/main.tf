@@ -29,12 +29,6 @@ provider "azurerm" {
     address_prefixes     = ["10.0.1.0/24"]
   }
 
-  resource "azurerm_public_ip" "pip" {
-    name                = "public-ip"
-    location            = azurerm_resource_group.rg.location
-    resource_group_name = azurerm_resource_group.rg.name
-    allocation_method   = "Dynamic"
-  }
 
   resource "azurerm_network_interface" "nic" {
     name                = "nic"
@@ -47,6 +41,13 @@ provider "azurerm" {
       private_ip_address_allocation = "Dynamic"
       public_ip_address_id          = azurerm_public_ip.pip.id
     }
+  }
+
+  resource "azurerm_public_ip" "pip" {
+    name                = "public-ip"
+    location            = azurerm_resource_group.rg.location
+    resource_group_name = azurerm_resource_group.rg.name
+    allocation_method   = "Dynamic"
   }
 
   resource "azurerm_linux_virtual_machine" "vm" {
