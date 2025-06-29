@@ -1,3 +1,14 @@
+# Docker 
+
+![alt text](image.png)
+
+
+
+
+
+
+
+
 # 🚀 DevOps Automation Pipeline (Jenkins + Terraform + Ansible + Azure)
 
 This project implements a complete DevOps CI/CD pipeline using **Jenkins**, **Terraform**, **Ansible**, **Docker**, and **Azure**. It provisions a virtual machine on Azure, installs Apache, and deploys a static website — all fully automated.
